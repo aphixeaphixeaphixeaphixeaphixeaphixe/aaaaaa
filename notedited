@@ -4155,7 +4155,7 @@ function library:init()
                 {self.cheatname, true},
                 {localplayer.Name, false},
                 {localplayer.DisplayName, false},
-                {'dev', true},
+                {'dev', false},
                 {'0 fps', true},
                 {'0ms', true},
                 {'00:00:00', true},
@@ -4372,8 +4372,8 @@ function library:CreateSettingsTab(menu)
         library.keyIndicator:SetPosition(newUDim2(0, x, 0, y));
     end});
 
-    mainSection:AddSeparator({text = 'Watermark', state = true})
-    mainSection:AddToggle({text = 'Enabled', flag = 'watermark_enabled'});
+    mainSection:AddSeparator({text = 'Watermark'})
+    mainSection:AddToggle({text = 'Enabled', flag = 'watermark_enabled', state = true});
     mainSection:AddList({text = 'Position', flag = 'watermark_pos', selected = 'Custom', values = {'Top', 'Top Left', 'Top Right', 'Bottom Left', 'Bottom Right', 'Custom'}, callback = function(val)
         library.watermark.lock = val;
     end})
