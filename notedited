@@ -4272,7 +4272,7 @@ function library:init()
     self.keyIndicator = self.NewIndicator({title = 'Keybinds', pos = newUDim2(0,15,0,325), enabled = false});
     self:SetOpen(true);
     self.hasInit = true
-    self:SendNotification(self.cheatname..' | ui initalized', 5);
+    --self:SendNotification(self.cheatname..' | ui initalized', 5);
 
 end
 
@@ -4320,7 +4320,7 @@ function library:CreateSettingsTab(menu)
 
     refreshConfigs()
 
-    mainSection:AddBind({text = 'Open / Close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.End, callback = function()
+    mainSection:AddBind({text = 'Open / Close', flag = 'togglebind', nomouse = true, noindicator = true, bind = Enum.KeyCode.RightControl, callback = function()
         library:SetOpen(not library.open)
     end});
 
