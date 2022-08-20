@@ -4324,7 +4324,7 @@ function library:CreateSettingsTab(menu)
         library:SetOpen(not library.open)
     end});
 
-    mainSection:AddButton({text = 'Join Discord', confirm = true, callback = function()
+    --[[mainSection:AddButton({text = 'Join Discord', confirm = true, callback = function()
         local res = syn.request({
 			Url = 'http://127.0.0.1:6463/rpc?v=1',
 			Method = 'POST',
@@ -4345,9 +4345,10 @@ function library:CreateSettingsTab(menu)
 
     mainSection:AddButton({text = 'Copy Discord', callback = function()
         setclipboard('discord.gg/jhS2vYpZqH')
-    end})
+    end})]]--
 
     mainSection:AddButton({text = 'Copy Game Invite', callback = function()
+    library:SendNotification(library.cheatname..' | copied to clipboard', 3);
         setclipboard('Roblox.GameLauncher.joinGameInstance('..game.PlaceId..',"'..game.JobId..'")')
     end})
 
