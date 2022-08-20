@@ -4372,7 +4372,7 @@ function library:CreateSettingsTab(menu)
         library.keyIndicator:SetPosition(newUDim2(0, x, 0, y));
     end});
 
-    mainSection:AddSeparator({text = 'Watermark'})
+    mainSection:AddSeparator({text = 'Watermark', state = true})
     mainSection:AddToggle({text = 'Enabled', flag = 'watermark_enabled'});
     mainSection:AddList({text = 'Position', flag = 'watermark_pos', selected = 'Custom', values = {'Top', 'Top Left', 'Top Right', 'Bottom Left', 'Bottom Right', 'Custom'}, callback = function(val)
         library.watermark.lock = val;
