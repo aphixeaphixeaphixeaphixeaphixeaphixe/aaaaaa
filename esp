@@ -468,11 +468,10 @@ function esp:init()
                     end
                 end)
                 if not s then
-                    print("lol"
+                    print("lol")
                 end
             end
         end)
-    )
 
 end
 
